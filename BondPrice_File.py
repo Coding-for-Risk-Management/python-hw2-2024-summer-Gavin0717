@@ -16,4 +16,4 @@ def getBondPrice(y, face, couponRate, m, ppy=1):
     
     return bondPrice
 
-getBondPrice(.03, 2000000, .04, 10,1)
+
