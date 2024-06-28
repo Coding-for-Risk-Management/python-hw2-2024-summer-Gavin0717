@@ -10,8 +10,8 @@ import numpy as np
 
 def getBondPrice(y, face, couponRate, m, ppy=1):
     t = np.arange(1,ppy*m+1)
-    cpn = couponRate * face
-    factor = [(1+y)**(-i) for i in t]
+    cpn = couponRate * face / ppy
+    factor = [(1+y/ppy)**(-i) for i in t]
     bondPrice = cpn * sum(factor) + factor[-1] * face
     
     return bondPrice
