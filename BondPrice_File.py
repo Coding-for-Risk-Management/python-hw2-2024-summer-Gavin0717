@@ -1,28 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 26 02:55:06 2024
+Created on Wed Jun 26 02:25:23 2024
 
 @author: gavin
 """
-import numpy as np
 
 import numpy as np
 
-def FizzBuzz(start, finish):
-    fbRange = np.arange(start, finish + 1)  
-    result = np.empty(fbRange.shape, dtype=object)  
+def getBondPrice(y, face, couponRate, m, ppy=1):
+    t = np.arange(1,ppy*m+1)
+    cpn = couponRate * face / ppy
+    factor = [(1+y/ppy)**(-i) for i in t]
+    bondPrice = cpn * sum(factor) + factor[-1] * face
+    
+    return bondPrice
 
-
-    result[(fbRange % 3 == 0) & (fbRange % 5 == 0)] = "FizzBuzz"
-    result[(fbRange % 3 == 0) & (fbRange % 5 != 0)] = "Fizz"
-    result[(fbRange % 3 != 0) & (fbRange % 5 == 0)] = "Buzz"
-
-
-    result[result == None] = fbRange[result == None]
-
-    return result
-
-
-
-
+getBondPrice(.03, 2000000, .04, 10,1)
