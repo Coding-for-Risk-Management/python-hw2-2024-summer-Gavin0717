@@ -1,6 +1,6 @@
 import WhoAmI_File
 def test_WhoAmI():
-    assert WhoAmI_File.WhoAmI() != 'yf2699'
+    assert WhoAmI.WhoAmI() != 'yf2699'
         
 import BondPrice_File
 def test_getBondPrice():
