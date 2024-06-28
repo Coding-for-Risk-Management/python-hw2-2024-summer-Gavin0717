@@ -12,9 +12,9 @@ def FizzBuzz(start, finish):
     result = np.empty(fbRange.shape, dtype=object)  
 
 
-    result[(fbRange % 3 == 0) & (fbRange % 5 == 0)] = "FizzBuzz"
-    result[(fbRange % 3 == 0) & (fbRange % 5 != 0)] = "Fizz"
-    result[(fbRange % 3 != 0) & (fbRange % 5 == 0)] = "Buzz"
+    result[(fbRange % 3 == 0) & (fbRange % 5 == 0)] = "fizzbuzz"
+    result[(fbRange % 3 == 0) & (fbRange % 5 != 0)] = "fizz"
+    result[(fbRange % 3 != 0) & (fbRange % 5 == 0)] = "buzz"
 
 
     result[result == None] = fbRange[result == None]
