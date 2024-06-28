@@ -13,11 +13,11 @@ def FizzBuzz(start, finish):
     
     result = fbRange.astype(str)
     
-    result = np.where((fbRange % 3 == 0) & (fbRange % 5 == 0), "FizzBuzz", result)
+    result = np.where((fbRange % 3 == 0) & (fbRange % 5 == 0), "fizzbuzz", result)
    
-    result = np.where((fbRange % 3 == 0) & (fbRange % 5 != 0), "Fizz", result)
+    result = np.where((fbRange % 3 == 0) & (fbRange % 5 != 0), "fizz", result)
 
-    result = np.where((fbRange % 3 != 0) & (fbRange % 5 == 0), "Buzz", result)
+    result = np.where((fbRange % 3 != 0) & (fbRange % 5 == 0), "buzz", result)
     
 
     return result
